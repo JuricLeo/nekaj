@@ -1,0 +1,24 @@
+{
+  "en": {
+    "theme": {
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "header": {
+      "Hero": "Hero",
+      "About": "About",
+      "Projects": "Projects"
+    }
+  },
+  "hr": {
+    "theme": {
+      "light": "Svijetla",
+      "dark": "Tamna"
+    },
+    "header": {
+      "Hero": "Naslovna",
+      "About": "O nama",
+      "Projects": "Projekti"
+    }
+  }
+}

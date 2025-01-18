@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/global/header";
 import Footer from "@/components/global/footer";
+import LangProvider from "@/components/global/lang-provider";
 
 const font = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -23,13 +24,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${font.className} antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="max-w-screen-xl mx-auto px-3 md:px-6">
-            <Header />
-            <main className="my-6">{children}</main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <LangProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange>
+            <div className="max-w-screen-xl mx-auto px-3 md:px-6">
+              <Header />
+              <main className="my-6">{children}</main>
+              <Footer />
+            </div>
+          </ThemeProvider>
+        </LangProvider>
       </body>
     </html>
   );
