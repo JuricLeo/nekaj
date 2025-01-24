@@ -30,7 +30,7 @@ export default function RootLayout({
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange>
-            <div className="max-w-screen-xl mx-auto px-3 md:px-6">
+            <div className="max-w-(--breakpoint-xl) mx-auto px-3 md:px-6">
               <Header />
               <main className="my-6">{children}</main>
               <Footer />
